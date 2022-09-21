@@ -1,2 +1,2 @@
 # Loader-Redux-BobLogistics
-Adds Loaders for Bob's Logistics using LoaderRedux API.
+Adds Loaders for Space Exploration using LoaderRedux API.
