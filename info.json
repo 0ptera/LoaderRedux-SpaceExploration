@@ -1,0 +1,11 @@
+{
+  "name": "LoaderRedux-SpaceExploration",
+  "version": "1.0.0",
+  "title": "Loader Redux for Space Exporation",
+  "author": "Optera",
+  "contact": "https://forums.factorio.com/memberlist.php?mode=viewprofile&u=21729",
+  "homepage": "https://forums.factorio.com/viewtopic.php?f=97&t=48412",
+  "description": "Adds Loaders for Space Exploration using LoaderRedux API.",
+  "factorio_version": "1.1",
+  "dependencies": ["LoaderRedux >= 1.8.0", "space-exploration >= 0.6.86", "! SpaceLoaderRedux"]
+}

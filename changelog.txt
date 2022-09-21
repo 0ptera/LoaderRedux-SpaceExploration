@@ -1,0 +1,6 @@
+---------------------------------------------------------------------------------------------------
+Version: 1.0.0
+Date: 2022-09-21
+  Features:
+    - adds loaders for space and deep space belts
+    - migrates existing loaders from Space Loader Redux by Alexsogge

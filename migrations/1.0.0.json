@@ -1,0 +1,24 @@
+{
+  "entity":
+  [
+    ["black-deepspace-loader", "deep-space-black-loader"],
+    ["blue-deepspace-loader", "deep-space-blue-loader"],
+    ["cyan-deepspace-loader", "deep-space-cyan-loader"],
+    ["green-deepspace-loader", "deep-space-green-loader"],
+    ["magenta-deepspace-loader", "deep-space-magenta-loader"],
+    ["red-deepspace-loader", "deep-space-red-loader"],
+    ["white-deepspace-loader", "deep-space-white-loader"],
+    ["yellow-deepspace-loader", "deep-space-yellow-loader"]
+  ],
+  "item":
+  [
+    ["black-deepspace-loader", "deep-space-black-loader"],
+    ["blue-deepspace-loader", "deep-space-blue-loader"],
+    ["cyan-deepspace-loader", "deep-space-cyan-loader"],
+    ["green-deepspace-loader", "deep-space-green-loader"],
+    ["magenta-deepspace-loader", "deep-space-magenta-loader"],
+    ["red-deepspace-loader", "deep-space-red-loader"],
+    ["white-deepspace-loader", "deep-space-white-loader"],
+    ["yellow-deepspace-loader", "deep-space-yellow-loader"]
+  ]
+}
