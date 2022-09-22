@@ -12,6 +12,7 @@ local loader_parameters = {
     subgroup = "belt",
     order = "d-d",
     belt = "se-space-transport-belt",
+    upgrade = "deep-space-loader-black",
   },
   ["deep-space-loader-black"] = {
     tint = util.color("000000"),
@@ -65,11 +66,10 @@ local loader_parameters = {
 
 -- Create Loaders
 local belt_prototypes = data.raw["transport-belt"]
-local loader_prototypes = data.raw["loader"]
 
 for loader, v in pairs(loader_parameters) do
   local item = loader_redux.make_loader_item(loader, v.subgroup, v.order, v.tint)
-  local entity = loader_redux.make_loader_entity(loader, belt_prototypes[v.belt], v.tint, nil)
+  local entity = loader_redux.make_loader_entity(loader, belt_prototypes[v.belt], v.tint, v.upgrade)
   entity.se_allow_in_space = true -- flag for SE 0.6.86 space buildings
   data:extend({item, entity})
 end
@@ -84,10 +84,11 @@ data:extend({
     hidden = false,
     energy_required = 5,
     ingredients = {
-      {"iron-gear-wheel", 20},
-      {"advanced-circuit", 20},
+      {"advanced-circuit", 10},
+      {"steel-plate", 10},
       {"express-loader", 1},
-      {type="fluid", name="lubricant", amount=80},
+      {"se-space-transport-belt", 2},
+      {type="fluid", name="lubricant", amount=40},
     },
     result = "space-loader"
   },
@@ -99,14 +100,15 @@ data:extend({
     hidden = false,
     energy_required = 5,
     ingredients = {
-    { name = "space-loader", amount = 1 },
-    { name = "se-naquium-cube", amount = 1 },
-    { name = "se-quantum-processor", amount = 1 },
-    { name = "se-heavy-assembly", amount = 1 },
-    { name = "se-superconductive-cable", amount = 1 },
-    { type = "fluid", name = "lubricant", amount = 100 },
+      { name = "space-loader", amount = 1 },
+      { name = "se-deep-space-transport-belt-black", amount = 2 },
+      { name = "se-naquium-cube", amount = 1 },
+      { name = "se-quantum-processor", amount = 1 },
+      { name = "se-heavy-assembly", amount = 1 },
+      { name = "se-superconductive-cable", amount = 1 },
+      { type = "fluid", name = "lubricant", amount = 100 },
     },
-    result = "deep-space-loader-black"
+    results = { { name ="deep-space-loader-black", amount = 1 } }
   },
   {
     type = "recipe",
@@ -200,6 +202,14 @@ data:extend({
     result = "deep-space-loader-yellow"
   },
 })
+
+-- Adjust base recipes
+data.raw.recipe["loader"].ingredients = {
+  {"motor", 10},
+  {"electronic-circuit", 5},
+  {"iron-plate", 10},
+  {"transport-belt", 2},
+}
 
 -- Add loader to existing techs
 local loader_techs = {

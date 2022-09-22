@@ -1,6 +1,8 @@
 ---------------------------------------------------------------------------------------------------
 Version: 1.0.0
-Date: 2022-09-21
+Date: 2022-09-22
   Features:
-    - adds loaders for space and deep space belts
-    - migrates existing loaders from Space Loader Redux by Alexsogge
+    - add loaders for SE belts
+    - loaders match speed setting of SE belts
+    - loader recipes are similar to SE splitters
+    - migrate existing loaders from Space Loader Redux by Alexsogge
